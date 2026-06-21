@@ -6,6 +6,12 @@ pipeline {
     }
   }
   stages {
+    stage('Install Git') {
+      steps {
+        sh 'yum install git -y'
+      }
+    }
+  stages {
     stage('Checkout') {
       steps {
         sh 'echo passed'
